@@ -6,7 +6,8 @@
  export default new Vuex.Store({
      state: {
          count: 0,
-         msg:""
+         msg:"",
+         data1:""
 
      },
 
@@ -19,6 +20,9 @@
          },
          changeMsg(context){
          	context.commit('changeMsg')
+         },
+         changeData1(context,data){
+         	context.commit('changeData1',data)
          }
      },
      
@@ -31,6 +35,11 @@
          },
          changeMsg(state){
          	state.msg = "卧槽"
+         },
+         changeData1(state,data){  
+         	
+         	state.data1 = data.msg
+
          }
      },
  })

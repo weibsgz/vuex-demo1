@@ -17,16 +17,29 @@
 
     <h3>和vuex无关的东西</h3>
     <button @click="doThis()">点击事件</button>
+
+
+      <h3>组件1</h3>
+      <test1></test1>
+
+      <h3>组件2</h3>
+      <test2></test2>
   </div>
+
+
 </template>
 
 <script>
 import {mapActions}  from 'vuex'; 
+import test1 from '@/components/test1/test1'
+import test2 from '@/components/test2/test2'
+
+
 export default {
   name: 'hello',
   data () {
     return {
-      
+        data1:"data1"
     }
   },
   computed: {
@@ -53,7 +66,11 @@ export default {
     ]),
     doThis:function(){
       alert(1)
-    }
+    },
+  
+   },
+   components:{
+    test1,test2
    }
 
 
